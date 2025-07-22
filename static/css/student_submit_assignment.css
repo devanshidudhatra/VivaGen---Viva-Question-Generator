@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f0ff 0%, #f9f9ff 100%);
+    min-height: 100vh;
+    color: #22223b;
+    padding-top: 60px;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #3a86ff 0%, #4361ee 100%);
+    box-shadow: 0 2px 8px rgba(58, 134, 255, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #fff !important;
+}
+
+.navbar .btn-outline-light {
+    border-radius: 25px;
+    border-width: 2px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.navbar .btn-outline-light:hover {
+    background: #fff;
+    color: #3a86ff;
+}
+
+.container {
+    max-width: 700px;
+    margin-top: 40px;
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #3a86ff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    animation: fadeInDown 0.7s;
+}
+
+form {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(67, 97, 238, 0.08), 0 1.5px 6px rgba(58, 134, 255, 0.06);
+    padding: 2rem;
+    animation: fadeInUp 1s;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #4361ee;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control-file {
+    border: 2px dashed #3a86ff;
+    padding: 1rem;
+    border-radius: 12px;
+    background: #f8fafc;
+    transition: border-color 0.2s;
+}
+
+.form-control-file:hover, .form-control-file:focus {
+    border-color: #4361ee;
+}
+
+button[type="submit"] {
+    background: linear-gradient(90deg, #3a86ff 0%, #4361ee 100%);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    transition: transform 0.12s, box-shadow 0.12s, background 0.2s;
+    box-shadow: 0 2px 8px rgba(67, 97, 238, 0.08);
+}
+
+button[type="submit"]:hover, button[type="submit"]:focus {
+    background: linear-gradient(90deg, #4361ee 0%, #3a86ff 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(67, 97, 238, 0.18);
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-top: 20px;
+        padding: 0 0.5rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    form {
+        padding: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

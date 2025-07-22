@@ -1,0 +1,152 @@
+/* Google Fonts for modern, academic feel */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f0ff 0%, #f9f9ff 100%);
+    min-height: 100vh;
+    color: #22223b;
+    padding-top: 60px;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #3a86ff 0%, #4361ee 100%);
+    box-shadow: 0 2px 8px rgba(58, 134, 255, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    color: #fff !important;
+}
+
+.navbar .btn-outline-light {
+    border-radius: 25px;
+    border-width: 2px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.navbar .btn-outline-light:hover {
+    background: #fff;
+    color: #3a86ff;
+}
+
+.container {
+    max-width: 700px;
+    margin-top: 40px;
+}
+
+.jumbotron {
+    background: linear-gradient(120deg, #f8fafc 60%, #e0e7ff 100%);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(67, 97, 238, 0.08), 0 1.5px 6px rgba(58, 134, 255, 0.06);
+    padding: 3rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, #ffd60a 0%, #fff0 70%);
+    opacity: 0.18;
+    z-index: 0;
+}
+
+.jumbotron h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #3a86ff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.jumbotron p.lead {
+    font-size: 1.25rem;
+    color: #22223b;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.jumbotron hr {
+    border-top: 2px solid #4361ee;
+    width: 60px;
+    margin: 1.5rem auto;
+    opacity: 0.5;
+}
+
+.jumbotron .btn-lg {
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 0.85rem 2.2rem;
+    border-radius: 30px;
+    margin: 0 0.7rem;
+    box-shadow: 0 2px 8px rgba(67, 97, 238, 0.08);
+    transition: transform 0.12s, box-shadow 0.12s, background 0.2s;
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron .btn-primary {
+    background: linear-gradient(90deg, #3a86ff 0%, #4361ee 100%);
+    border: none;
+    color: #fff;
+}
+
+.jumbotron .btn-primary:hover, .jumbotron .btn-primary:focus {
+    background: linear-gradient(90deg, #4361ee 0%, #3a86ff 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(67, 97, 238, 0.18);
+}
+
+.jumbotron .btn-secondary {
+    background: linear-gradient(90deg, #ffd60a 0%, #ffb703 100%);
+    border: none;
+    color: #22223b;
+}
+
+.jumbotron .btn-secondary:hover, .jumbotron .btn-secondary:focus {
+    background: linear-gradient(90deg, #ffb703 0%, #ffd60a 100%);
+    color: #22223b;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(255, 214, 10, 0.18);
+}
+
+@media (max-width: 600px) {
+    .jumbotron {
+        padding: 2rem 1rem;
+    }
+    .jumbotron h1 {
+        font-size: 2rem;
+    }
+    .jumbotron .btn-lg {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    .container {
+        margin-top: 20px;
+    }
+}
+
+/* Subtle fade-in animation for the jumbotron */
+.jumbotron {
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

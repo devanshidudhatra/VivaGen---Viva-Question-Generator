@@ -1,0 +1,145 @@
+/* Google Fonts for modern, academic feel (same as style.css) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f0ff 0%, #f9f9ff 100%);
+    min-height: 100vh;
+    color: #22223b;
+    padding-top: 70px;
+    margin: 0;
+}
+
+.auth-container {
+    width: 360px;
+    margin: 60px auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(67, 97, 238, 0.08), 0 1.5px 6px rgba(58, 134, 255, 0.06);
+    position: relative;
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    overflow: hidden;
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3a86ff;
+}
+
+.auth-container .error {
+    color: #d92020;
+    text-align: center;
+    margin: 0 0 1rem;
+    font-weight: 500;
+}
+
+.auth-container form input{
+    width: 90%;
+    margin: 0 0 1.2rem;
+    padding: 10px 16px;
+    border: 2px solid #e0e7ff;
+    border-radius: 8px;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #22223b;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.auth-container form select {
+    width: 100%;
+    margin: 0 0 1.2rem;
+    padding: 10px 16px;
+    border: 2px solid #e0e7ff;
+    border-radius: 8px;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #22223b;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.auth-container form input:focus,
+.auth-container form select:focus {
+    border-color: #3a86ff;
+}
+
+.auth-container form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #3a86ff 0%, #4361ee 100%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.12s, box-shadow 0.12s;
+    box-shadow: 0 2px 8px rgba(67, 97, 238, 0.08);
+    margin: 1rem 0 0;
+}
+
+.auth-container form button:hover,
+.auth-container form button:focus {
+    background: linear-gradient(90deg, #4361ee 0%, #3a86ff 100%);
+    transform: translateY(-2px);
+}
+
+.auth-container p {
+    text-align: center;
+    margin: 1.2rem 0 0;
+    color: #22223b;
+    font-weight: 500;
+}
+
+.auth-container p a {
+    color: #4361ee;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Subtle decorative circle, like in style.css's jumbotron */
+.auth-container::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, #ffd60a 0%, #fff0 70%);
+    opacity: 0.18;
+    z-index: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .auth-container {
+        width: 85%;
+        margin: 60px auto;
+        padding: 1.5rem;
+    }
+    .auth-container h2 {
+        font-size: 1.7rem;
+    }
+}
