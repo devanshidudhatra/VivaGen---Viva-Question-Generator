@@ -32,7 +32,7 @@ def login_required(role=None):
 app = Flask(__name__)
 app.secret_key = os.urandom(24)  # Required for session management
 
-app.config['MONGO_URI'] = 'mongodb+srv://heetdobariya07:uDR0Eeztg9NllZUy@cluster.yn4nj.mongodb.net/resume_analyzer?retryWrites=true&w=majority'
+app.config['MONGO_URI'] = 'MONGO_URI'
 app.config['DATABASE_NAME'] = 'assignment_db'
 
 try:
